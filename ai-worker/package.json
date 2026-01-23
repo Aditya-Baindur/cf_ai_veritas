@@ -1,0 +1,21 @@
+{
+	"name": "ai-worker",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"tail": "wrangler tail",
+		"deploy": "npm run db:migrate && wrangler deploy",
+		"db:migrate": "wrangler d1 migrations apply db --remote",
+		"check": "npm run cf-typegen && wrangler deploy --dry-run"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"typescript": "^5.5.2",
+		"vitest": "~4.0.16",
+		"wrangler": "^4.54.0"
+	}
+}

@@ -1,0 +1,14 @@
+echo 'Sourcing Chat.sh'
+source ./chat.sh
+
+
+abc(){
+tree -if | while IFS= read -r line; do                    ok  20:05:42 
+  if [ -f "$line" ]; then
+    echo "===== $line ====="
+    cat "$line"
+    echo
+  fi
+done
+
+}

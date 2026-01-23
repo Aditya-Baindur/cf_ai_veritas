@@ -1,0 +1,17 @@
+{
+  "name": "chat.adityabaindur.dev",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "i-all": "npm install && npm --prefix frontend install && npm --prefix ai-worker install",
+    "backend": "npm --prefix ai-worker run dev",
+    "frontend": "pnpm --dir frontend dev",
+    "deploy": "npm --prefix ai-worker run deploy",
+    "format": "prettier --write .",
+    "tail": "npm --prefix ai-worker run tail"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
+}
